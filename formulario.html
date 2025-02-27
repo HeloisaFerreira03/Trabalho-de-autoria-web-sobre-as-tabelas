@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="css.css">
+    <script src="java.js"></script>
+    <script>
+          function adicionarMusica() {
+            const musica = document.getElementById("musica").value;
+            const banda = document.getElementById("banda").value;
+
+            if (musica && banda) {
+                const tabela = document.getElementById("tabelaMusicas");
+                const novaLinha = tabela.insertRow(tabela.rows.length - 1);
+
+                const celulaMusica = novaLinha.insertCell(0);
+                const celulaBanda = novaLinha.insertCell(1);
+
+                celulaMusica.textContent = musica;
+                celulaBanda.textContent = banda;
+
+                document.getElementById("musica").value = "";
+                document.getElementById("banda").value = "";
+            } else {
+                alert("Por favor, preencha ambos os campos: Música e Banda.");
+            }}
+    </script>
+</head>
+<body class="alignt-center">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="devs.html">desenvolvedores</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <header>
+                <h1>Formulario</h1>
+            </header>
+            <section class="formulario" id="forms">
+                <h2>Formulario de músicas </h2>
+               
+                        <label for="música"> Sua Música favorita </label>
+                        <input type="text" id="musica" name="musica" class="musica" placeholder="nome da música"/>
+
+                        <label for="banda"> Nome da banda ou cantor </label>
+                        <input type="text" id="banda" name="banda" class="banda" placeholder="nome da banda ou cantor"/>
+                    
+                    <button  type="button" onclick="adicionarMusica()">Adicionar Música</button>
+                                           
+                        <table id="tabelaMusicas"  border="1">
+
+                            <caption>Tabela de Músicas</caption>
+                        <thead>
+                            <tr>
+                                <th id="colunaMus." scope="col">Músicas</th>
+                                <th id="colunaBan" scope="col">Autor ou banda</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Your Word</td>
+                                <td>Hilsong Worship</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Broken Vessels</td>
+                                <td>Hilsong Worship</td>
+                              </tr>
+
+                            <tr>
+                                <td scope="row">Open Heaven</td>
+                                <td>Hilsong Worship</td>
+                            </tr>
+
+                            <tr>
+                                <td scope="row">Eu sou o Gummy Bear</td>
+                                <td>Gummy Bear</td>
+                            </tr>
+
+                            <tr>
+                                <td scope="row">Acerola</td>
+                                <td>Murart</td>
+                            </tr>
+
+                            <tr>
+                                <td scope="row">Diáspora</td>
+                                <td>Tribalistas</td>
+                            </tr>
+
+                            <tr>
+                                <td scope="row">Smells like teen spirt</td>
+                                <td>Nirvana</td>
+                            </tr>
+
+                            <tr>
+                                <td scope="row">Equalize</td>
+                                <td>Pitty</td>
+                            </tr>
+
+                            <tr>
+                                <td scope="row">3x4</td>
+                                <td>Engenheiros do hawaii</td>
+                            </tr>
+
+                            <tr>
+                                <td scope="row">O Papa é Pop</td>
+                                <td>Engenheiros do hawaii</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            
+                            <tr>
+                                <td>todos os direitos reservados&copy;</td>
+                            </tr>
+                        </tfoot>
+                    </table> 
+
+            </section>
+        </article>
+    </main>
+    <footer>
+        <div>
+             <p>IFRN campus Santa Cruz</p>
+        </div>
+        <div>
+            <p>Trabalho de Autoria web, Prof. Marcelo Figueredo Barbosa Júnior</p>
+        </div>
+        <div>
+            <p>Componentes: Heloísa Moraes Ferreira, Laura Ferreira Pontes, Guerlain Vinícius Cavalcante Pereira</p>
+        </div>
+        <div>
+            <p>Referências: mdn web docs e dev media</p>
+        </div>
+    </footer>
+</body>
+</html>
